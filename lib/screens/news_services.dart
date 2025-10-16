@@ -1,6 +1,8 @@
 import 'package:news_app/screens/news_response.dart';
 import 'package:news_app/utils/constants.dart';
 
+// news services adalah jembatan dari client dan server
+
 class NewsServices {
   static const String _baseUrl = Constants.baseURL;
   static final String _apikey = Constants.apiKey;
@@ -24,8 +26,12 @@ class NewsServices {
       if (category != null && category.isNotEmpty) {
         queryParams['category'] = category;
       }
-      // Berfungsi untuk parsing data dari json ke UI
+      // Berfungsi untuk parsing (melempar & mengambil) data dari json ke UI
+      // Simplenya: kita daftarin baseURL + endpoint yang akan digunakan
       final uri = Uri.parse('$_baseUrl${Constants.topHeadLines}')
+            // Untuk daftarin baseURL query(permintaan data)
+            .replace(queryParameters: queryParams);
+      // secara general untuk ngasi data (server akan paham)
       // e = Error
     } catch (e) {
       
