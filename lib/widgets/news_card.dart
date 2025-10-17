@@ -73,12 +73,46 @@ class NewsCard extends StatelessWidget {
                           ),
                           SizedBox(width: 8),
                         ],
+
                         // timestamp
                         if (articles.publishedAt != null)
                         Text(
-                          timeago.format(DateTime.parse(articles.publishedAt!))
+                          timeago.format(DateTime.parse(articles.publishedAt!)),
+                          style: TextStyle(
+                            color: AppColors.textSecondary,
+                            fontSize: 12
+                          ),
                         )
                       ],
+                    ),
+                    SizedBox(height: 12),
+
+                    // Title
+                    if (articles.title != null)
+                    Text(
+                      articles.title!,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.textPrimary,
+                        height: 1.3
+                      ),
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    SizedBox(height: 8),
+
+                    // Description
+                    if (articles.description != null)
+                    Text(
+                      articles.description!,
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: AppColors.textSecondary,
+                        height: 1.4
+                      ),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                     )
                   ],
                 ),
