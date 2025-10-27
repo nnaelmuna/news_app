@@ -3,9 +3,9 @@ import 'package:news_app/screens/news_articles.dart';
 class NewsResponse {
   final String status;
   final int totalResults;
-  final List<NewsArticles> articles;
+  final List<NewsArticle> article;
 
-  NewsResponse({required this.status, required this.totalResults, required this.articles});
+  NewsResponse({required this.status, required this.totalResults, required this.article});
 
   factory NewsResponse.fromJson(Map<String,dynamic> json) {
     return NewsResponse(
@@ -13,8 +13,8 @@ class NewsResponse {
       totalResults: json['totalResults'] ?? 0,
       // kode yg digunakan utk mengkonversi data mentah dari server agar
       // siap digunakan oleh aplikasi
-      articles: (json['articles'] as List<dynamic>?)
-               ?.map((articles)=> NewsArticles.fromJson(articles))
+      article: (json['articles'] as List<dynamic>?)
+               ?.map((article)=> NewsArticle.fromJson(article))
                .toList() ?? []
     );
   }
