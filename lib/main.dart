@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
-import 'package:news_app/bindings/app_bindings.dart';
-import 'package:news_app/routes/app_pages.dart';
-import 'package:news_app/utils/app_colors.dart';
+import 'package:theindtimes_app/bindings/app_bindings.dart';
+import 'package:theindtimes_app/routes/app_pages.dart';
+import 'package:theindtimes_app/utils/app_colors.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'News App',
+      title: 'The Indonesia Times App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         primaryColor: AppColors.primary,

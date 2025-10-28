@@ -1,8 +1,8 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
-import 'package:news_app/bindings/home_bindings.dart';
-import 'package:news_app/screens/home_screen.dart';
-import 'package:news_app/screens/news_detail_screen.dart';
-import 'package:news_app/screens/splash_screen.dart';
+import 'package:theindtimes_app/bindings/home_bindings.dart';
+import 'package:theindtimes_app/screens/home_screen.dart';
+import 'package:theindtimes_app/screens/news_detail_screen.dart';
+import 'package:theindtimes_app/screens/splash_screen.dart';
 
 part 'app_routes.dart';
 

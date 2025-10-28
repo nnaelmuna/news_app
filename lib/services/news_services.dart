@@ -1,8 +1,8 @@
 import 'dart:convert';
 // mendefinisikan sebuah packge atau library menjadi sebuah variable secara langsung
 import 'package:http/http.dart' as http;
-import 'package:news_app/models/news_response.dart';
-import 'package:news_app/utils/constants.dart';
+import 'package:theindtimes_app/models/news_response.dart';
+import 'package:theindtimes_app/utils/constants.dart';
 
 class NewsServices {
   static const String _baseUrl = Constants.baseURL;

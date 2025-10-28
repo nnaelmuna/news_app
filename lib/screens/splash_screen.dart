@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/utils/app_colors.dart';
+import 'package:theindtimes_app/utils/app_colors.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

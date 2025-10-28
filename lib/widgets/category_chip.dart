@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/utils/app_colors.dart';
+import 'package:theindtimes_app/utils/app_colors.dart';
 
 class CategoryChip extends StatelessWidget {
   final String label;

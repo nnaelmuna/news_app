@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:news_app/models/news_article.dart';
-import 'package:news_app/services/news_services.dart';
-import 'package:news_app/utils/constants.dart';
+import 'package:theindtimes_app/models/news_article.dart';
+import 'package:theindtimes_app/services/news_services.dart';
+import 'package:theindtimes_app/utils/constants.dart';
 
 class NewsController extends GetxController {
   final NewsServices _newsService = NewsServices();
