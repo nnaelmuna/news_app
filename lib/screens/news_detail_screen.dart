@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:news_app/screens/news_articles.dart';
+import 'package:news_app/models/news_article.dart';
 import 'package:news_app/utils/app_colors.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -10,7 +10,7 @@ import 'package:timeago/timeago.dart' as timeago ;
 
 
 class NewsDetailScreen extends StatelessWidget {
-  final NewsArticles article = Get.arguments as NewsArticles;
+  final NewsArticle article = Get.arguments as NewsArticle;
 
   NewsDetailScreen({super.key});
 

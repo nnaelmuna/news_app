@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:news_app/bindings/app_bindings.dart';
 import 'package:news_app/routes/app_pages.dart';

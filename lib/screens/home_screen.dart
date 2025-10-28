@@ -48,7 +48,7 @@ class HomeScreen extends GetView<NewsController>{
           // news list
           Expanded( // gabakal biarin ada runag kososng yang tersisa
             child: Obx(() { // obx buat ngasi tau ui kalo ada perubahan
-            if (controller.isloading) {
+            if (controller.isLoading) {
               return LoadingShimmer();
             }
             if (controller.error.isNotEmpty) {

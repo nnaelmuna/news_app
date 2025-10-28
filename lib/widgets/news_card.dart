@@ -1,11 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app/screens/news_articles.dart';
+import 'package:news_app/models/news_article.dart';
 import 'package:news_app/utils/app_colors.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 class NewsCard extends StatelessWidget {
-  final NewsArticles articles;
+  final NewsArticle articles;
   final VoidCallback onTap;
 
   const NewsCard({super.key, required this.articles, required this.onTap});

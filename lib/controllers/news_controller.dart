@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
 import 'package:news_app/models/news_article.dart';
-import 'package:news_app/services/news_service.dart';
+import 'package:news_app/services/news_services.dart';
 import 'package:news_app/utils/constants.dart';
 
 class NewsController extends GetxController {
-  final NewsService _newsService = NewsService();
+  final NewsServices _newsService = NewsServices();
 
   // Observable variables
   final _isLoading = false.obs;
@@ -30,11 +30,11 @@ class NewsController extends GetxController {
       _isLoading.value = true;
       _error.value = '';
 
-      final response = await _newsService.getTopHeadlines(
-        category: category ?? _selectedCategory.value,
+      final response = await _newsService.getTopHeadLines(
+        Category: category ?? _selectedCategory.value,
       );
 
-      _articles.value = response.articles;
+      _articles.value = response.article;
     } catch (e) {
       _error.value = e.toString();
       Get.snackbar(
@@ -66,7 +66,7 @@ class NewsController extends GetxController {
       _error.value = '';
 
       final response = await _newsService.searchNews(query: query);
-      _articles.value = response.articles;
+      _articles.value = response.article;
     } catch (e) {
       _error.value = e.toString();
       Get.snackbar(
